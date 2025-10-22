@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreang Phearum - Professional CV</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and base styling */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the main container */
+        .cv-container {
+            min-height: 11in; /* Approximate A4/Letter height for printing */
+        }
+        /* Print optimization */
+        @media print {
+            body {
+                background-color: white !important;
+                margin: 0;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex justify-center py-10">
+
+    <!-- CV Container - Single Page Layout -->
+    <div class="cv-container w-full max-w-3xl bg-white shadow-2xl rounded-xl overflow-hidden">
+        
+        <!-- Header: Name, Title, and Photo -->
+        <header class="bg-gray-900 text-white p-8 flex items-center space-x-6">
+            
+            <!-- Profile Photo (placed first for modern layout) -->
+            <div class="relative w-28 h-28 flex-shrink-0">
+                <img 
+                    src="uploaded:IMG_8913.jpg-712a0fa6-e0c7-43a1-a9aa-ed21f27d2e6b" 
+                    alt="Profile Picture of SREANG PHEARUM" 
+                    class="w-full h-full object-cover rounded-full border-4 border-yellow-500 shadow-xl"
+                    onerror="this.onerror=null; this.src='https://placehold.co/112x112/555555/ffffff?text=Photo';"
+                >
+            </div>
+
+            <!-- Name and Contact Info -->
+            <div class="flex-grow">
+                <h1 class="text-4xl font-extrabold tracking-tight">SREANG PHEARUM</h1>
+                <p class="text-xl font-light text-yellow-500 mt-1">Management Information Systems Student</p>
+                <div class="flex flex-wrap items-center text-sm mt-3 space-y-1 sm:space-y-0 sm:space-x-4">
+                    <span class="flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74A1 1 0 0118 17v2a1 1 0 01-1 1H3a1 1 0 01-1-1v-2h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74A1 1 0 0118 17v2a1 1 0 01-1 1H3a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                        +855 69 954 014
+                    </span>
+                    <span class="flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        sreangphearum159@gmail.com
+                    </span>
+                    <span class="flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 1110.8 7.9l-2.5-2.5a.75.75 0 011.06-1.06l2.5 2.5a8.5 8.5 0 10-12.02 0l-2.5-2.5a.75.75 0 011.06-1.06l2.5 2.5a7 7 0 019.89-9.89zM10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                        103 Trapeang Chhuk, Tuek Tla, Sen Sok, Phnom Penh
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area (Single Column) -->
+        <div class="p-8 space-y-8">
+            
+            <!-- About Me -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wider mb-3 border-b-2 border-yellow-500 pb-1">About Me</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    I am a Management Information Systems student with strong **organizational and problem-solving skills**. Highly motivated to learn and grow, I am eager to gain my first professional experience where I can apply my knowledge of technology and **teamwork** to contribute to organizational success.
+                </p>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wider mb-4 border-b-2 border-yellow-500 pb-1">Education</h2>
+                
+                <!-- SETEC INSTITUTE -->
+                <div class="mb-4 p-4 border-l-4 border-gray-300 hover:border-yellow-600 transition duration-300 bg-gray-50 rounded">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">SETEC Institute – Phnom Penh</h3>
+                        <span class="text-sm text-gray-500 font-medium">Expected 2029</span>
+                    </div>
+                    <p class="text-gray-700 italic">Bachelor of Management Information Systems</p>
+                </div>
+
+                <!-- HUN SEN PEAM CHIKANG HIGH SCHOOL -->
+                <div class="p-4 border-l-4 border-gray-300 hover:border-yellow-600 transition duration-300 bg-gray-50 rounded">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Hun Sen Peam Chikang High School – Kampong Cham</h3>
+                        <span class="text-sm text-gray-500 font-medium">2019 – 2025</span>
+                    </div>
+                    <p class="text-gray-700 italic">High School Diploma</p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wider mb-4 border-b-2 border-yellow-500 pb-1">Skills</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">Microsoft Word / Google Docs</span>
+                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">Microsoft Excel (Data Analysis)</span>
+                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">PowerPoint / Google Slides</span>
+                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">Basic Database Knowledge</span>
+                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">Organizational & Teamwork Skills</span>
+                    <span class="bg-yellow-500 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">Khmer (Native)</span>
+                    <span class="bg-yellow-500 text-white text-sm font-medium px-3 py-1 rounded-full shadow-md">English (Intermediate)</span>
+                </div>
+            </section>
+
+            <!-- Volunteer Experience -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wider mb-4 border-b-2 border-yellow-500 pb-1">Volunteer Experience</h2>
+                
+                <!-- Cambodia Scouts -->
+                <div class="mb-4 pl-6 border-l-2 border-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900">Cambodia Scouts – <span class="text-gray-600 font-normal italic">Hun Sen Peam Chikang High School</span></h3>
+                    <ul class="list-disc pl-5 text-gray-700 text-base mt-1 space-y-1">
+                        <li>Participated in community service projects, fostering teamwork and leadership skills.</li>
+                    </ul>
+                </div>
+
+                <!-- Cambodian Red Cross -->
+                <div class="pl-6 border-l-2 border-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900">Cambodian Red Cross – <span class="text-gray-600 font-normal italic">Hun Sen Peam Chikang High School</span></h3>
+                    <ul class="list-disc pl-5 text-gray-700 text-base mt-1 space-y-1">
+                        <li>Assisted in school health campaigns, fundraising activities, and peer support programs.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects & Academic Work -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wider mb-4 border-b-2 border-yellow-500 pb-1">Projects & Academic Work</h2>
+                <ul class="list-disc pl-5 text-gray-700 text-base space-y-2">
+                    <li>Designed presentations and reports for group assignments.</li>
+                    <li>Created small database projects as part of coursework.</li>
+                    <li>Collaborated with classmates on technology-related problem-solving tasks.</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+</body>
+</html>
