@@ -1,1 +1,224 @@
-# birthday-card.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <br>
+    <style>
+        /* --- 1. Background and Layout --- */
+        body {
+            background-color: #87CEEB; /* Sky blue background */
+            display: grid;
+            place-items: center; /* This perfectly centers the .birthday-card */
+            min-height: 100vh;
+            margin: ;
+            padding: 0;
+            font-family: 'Comic Sans MS', 'cursive', sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .birthday-card {
+            position: center;
+            /* !! CHANGED: Removed padding-top to allow true centering */
+        }
+
+        /* --- 2. The Cake --- */
+        .cake {
+            position: absolute;
+            width: 500px;
+            height: 200px;
+            /* !! ADDED: Margin to create space for candles */
+            margin-top: px; 
+            animation: blink 1.5s infinite alternate;
+        }
+
+        .layer {
+            position: absolute;
+            width: 100%;
+            height: 200px; /* Height of each layer */
+            background-color: #f745b2; /* Light pink */
+            border: 3px solid #FF69B4; /* Hot pink border */
+            border-radius: 50% 50% 50% 50% / 20% 20% 30% 30%;
+            box-shadow: 0 8px 200px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Stacking the layers */
+        .layer-1 {
+            bottom: 0;
+            z-index: 3;
+        }
+        .layer-2 {
+            bottom: 110px;
+            width: 70%;
+            left: 15%;
+            z-index: 2;
+        }
+        .layer-3 {
+            bottom: 220px;
+            width: 50%;
+            left: 25%;
+            z-index: 1;
+        }
+
+        /* The 'blink' (glowing) animation */
+        @keyframes blink {
+            from {
+                filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px #ffc0cb);
+            }
+            to {
+                filter: drop-shadow(0 0 15px #ffffff) drop-shadow(0 0 30px #ffc0cb);
+            }
+        }
+
+        /* --- 3. The Candles (18) --- */
+        .candles {
+            position: absolute;
+            /* !! CHANGED: Positioned candles 20px above the top layer */
+            top: -310px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px; /* Space between '1' and '8' */
+            z-index: 10;
+        }
+
+        .candle-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .number {
+            font-size: 80px;
+            font-weight: bold;
+            color: #FF69B4;
+            text-shadow: 2px 2px #FFF;
+            line-height: 1; /* Keep it tight */
+        }
+        
+        .wick {
+            width: 10px;
+            height: 15px;
+            background-color: #555;
+            position: relative;
+            top: -7px; /* Position wick on top of the number */
+        }
+
+        /* --- 4. The Fire Animation --- */
+        .flame {
+            width: 16px;
+            height: 50px;
+            background-color: #FFD700; /* Gold/Yellow */
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            /* !! CHANGED: Adjusted 'top' to sit ON TOP of the wick */
+            top: -120px; 
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+            animation: flicker 1s infinite alternate;
+            transform-origin: bottom;
+        }
+
+        /* This class will be added by JavaScript to turn off the flame */
+        .flame.off {
+            display: none;
+        }
+
+        @keyframes flicker {
+            0% {
+                transform: scaleY(1) skewX(2deg);
+                opacity: 1;
+            }
+            50% {
+                transform: scaleY(0.9) skewX(-2deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scaleY(1.1) skewX(0deg);
+                opacity: 1;
+            }
+        }
+
+        /* --- 5. Title and Button --- */
+        .title {
+            font-size: 2.5em;
+            color: #4B0082; /* Indigo */
+            text-shadow: 2px 2px #FFF;
+            margin-top: 30px;
+        }
+
+        #toggleButton {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', 'cursive', sans-serif;
+            color: white;
+            background-color: #FF69B4;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #toggleButton:hover {
+            background-color: #FF1493; /* Deeper pink */
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="birthday-card">
+
+        <div class="cake">
+            <div class="candles">
+                <div class="candle-container">
+                    <div class="number">1</div>
+                    <div class="wick"></div>
+                    <div class="flame"></div> </div>
+                <div class="candle-container">
+                    <div class="number">8</div>
+                    <div class="wick"></div>
+                    <div class="flame"></div> </div>
+            </div>
+
+            <div class="layer layer-3"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-1"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="title">Happy Birthday Twin Soul</h1>
+
+        <button id="toggleButton">click me</button>
+
+    </div>
+    
+    <script>
+        // --- 8. The JavaScript for the Button ---
+        // (This part is unchanged)
+
+        const toggleButton = document.getElementById('toggleButton');
+        const flames = document.querySelectorAll('.flame');
+
+        toggleButton.addEventListener('click', function() {
+            flames.forEach(flame => {
+                flame.classList.toggle('off');
+            });
+        });
+    </script>
+
+</body>
+</html>
